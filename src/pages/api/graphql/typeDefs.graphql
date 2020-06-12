@@ -1,0 +1,14 @@
+type Query {
+  test: Test!
+  news(topic: String): [Article]
+}
+
+type Test {
+  response: String!
+}
+
+type Article {
+  author: String
+  title: String!
+  description: String!
+}
