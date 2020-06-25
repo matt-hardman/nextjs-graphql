@@ -4,10 +4,12 @@ import { resolvers } from "./resolvers";
 import typeDefs from "./typeDefs.graphql";
 import { Args } from "./types";
 
+const URL = "http://localhost:3000";
+
 const getter = () => ({
-  getTest: () => fetch("http://localhost:3000/api/test"),
+  getTest: () => fetch(`${URL}/api/test`),
   getNews: ({ topic }: Args) =>
-    fetch("http://localhost:3000/api/news", {
+    fetch(`${URL}/api/news`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
