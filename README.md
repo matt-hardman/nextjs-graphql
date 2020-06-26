@@ -1,3 +1,6 @@
 Example of next.js with grahphql lambda
 
-run `yarn dev`
+
+clone
+run `yarn`
+run `yarn dev` to run locally
