@@ -16,7 +16,9 @@ interface Article {
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const { query } = req.body;
 
-  const url = `${baseUrl}${query}&from=2020-05-12&sortBy=publishedAt&apiKey=${apiKey}`;
+  const dateFrom = Date.now();
+
+  const url = `${baseUrl}${query}&from=${dateFrom}&sortBy=publishedAt&apiKey=${apiKey}`;
 
   const response = await fetch(url);
   const json: Response = await response.json();
